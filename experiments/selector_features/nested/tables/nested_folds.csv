@@ -1,0 +1,6 @@
+fold,n_test,greedy_removed,greedy_minus_all_inner,ci_lo,ci_hi,chosen,chosen_inner_Q,chosen_outer_Q,chosen_outer_exact,fixed_outer_Q,fixed_outer_exact,catmo_Q,fset_argmax_chosen,joint_argmax_chosen,fset_argmax_outer_Q,joint_argmax_outer_Q,inner_rank_of_fixed,all_outer_picks_match_study,max_abs_diff_vs_study
+0,199,-,,,,ALL+struct_lgbm,0.960174,0.957017,0.688442,0.957017,0.688442,0.930884,ALL+struct_lgbm,ALL+struct_lgbm,0.957017,0.957017,1,True,0.0
+1,198,-,,,,ALL+struct_lgbm,0.959267,0.960723,0.646465,0.960723,0.646465,0.937854,ALL+struct_lgbm,ALL+struct_lgbm,0.960723,0.960723,1,True,0.0
+2,199,brisque,0.000113,-0.000203,0.000492,ALL+struct_lgbm,0.959411,0.960236,0.703518,0.960236,0.703518,0.934657,greedy+struct_lgbm,greedy+struct_lgbm,0.960389,0.960389,2,True,0.0
+3,198,-,,,,ALL+struct_lgbm,0.959202,0.959582,0.565657,0.959582,0.565657,0.938087,ALL+struct_lgbm,ALL+struct_lgbm,0.959582,0.959582,1,True,0.0
+4,198,brisque,0.000142,-0.000205,0.000547,ALL+struct_lgbm,0.959001,0.960401,0.656566,0.960401,0.656566,0.936888,greedy+struct_lgbm,greedy+struct_lgbm,0.960638,0.960638,2,True,0.0

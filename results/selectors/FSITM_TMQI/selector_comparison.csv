@@ -1,0 +1,5 @@
+method,mean_Q,gap_recovered,mean_regret,median_regret,exact_accuracy,near_optimal_rate,top3_accuracy,macro_f1,balanced_accuracy,override_rate,n_operators_picked,wilcoxon_p_vs_baseline
+always-reinhard02,0.919635,0.0,0.013125,0.0095,0.214718,0.375,,0.023568,0.066667,0.0,1.0,
+random pick (expected),0.889448,-2.299956,0.043312,,0.066667,,,,,,,
+structured LightGBM selector,0.930938,0.861127,0.001823,0.0,0.677419,0.877016,0.931452,0.476551,0.463816,0.789315,13.0,0.0
+oracle,0.93276,1.0,0.0,0.0,1.0,1.0,,1.0,1.0,0.785282,15.0,0.0

@@ -1,0 +1,4 @@
+step,removed,groups,n_groups,mean_Q,exact,gain,gain_worst,n_features
+0,,hulusic17+pouli10+reinhard02+drago03+durand02+fattal02+reinhard05+kimkautz08+mai11+mantiuk08+tmqi+brisque+si+tmqiblock,14,0.958837,0.615423,0.0,0.0,
+1,pouli10,hulusic17+reinhard02+drago03+durand02+fattal02+reinhard05+kimkautz08+mai11+mantiuk08+tmqi+brisque+si+tmqiblock,13,0.959236,0.63004,0.000399,0.000331,124.0
+2,kimkautz08,hulusic17+reinhard02+drago03+durand02+fattal02+reinhard05+mai11+mantiuk08+tmqi+brisque+si+tmqiblock,12,0.959275,0.628528,3.9e-05,3.8e-05,122.0

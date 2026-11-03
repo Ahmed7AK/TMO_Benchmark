@@ -1,0 +1,563 @@
+% References for the TMO selector report (REPORT_DRAFT.md).
+% Every DOI below was checked against Crossref (api.crossref.org) on 2026-10-26, except the two
+% Eurographics DOIs (10.2312/..., registered outside Crossref; taken from the EG Digital Library).
+% Entries without a DOI (Kim & Kautz 2008, Fairchild 2007, Funt & Shi 2010, Xiao et al. 2002, LightGBM,
+% Holm 1979, Efron & Tibshirani, Burges 2010, Cawley & Talbot, ITU-T P.910, scikit-learn) were not
+% machine-checked; their details are standard but worth a glance.
+% Grouped: problem framing / evaluation, data, operators, software, metrics, features, learning and statistics.
+
+% ---------------------------------------------------------------- problem framing and TMO evaluation
+@incollection{rice1976algorithm,
+  author    = {Rice, John R.},
+  title     = {The Algorithm Selection Problem},
+  booktitle = {Advances in Computers},
+  volume    = {15},
+  pages     = {65--118},
+  publisher = {Elsevier},
+  year      = {1976},
+  doi       = {10.1016/S0065-2458(08)60520-3}
+}
+@article{kerschke2019automated,
+  author  = {Kerschke, Pascal and Hoos, Holger H. and Neumann, Frank and Trautmann, Heike},
+  title   = {Automated Algorithm Selection: Survey and Perspectives},
+  journal = {Evolutionary Computation},
+  volume  = {27},
+  number  = {1},
+  pages   = {3--45},
+  year    = {2019},
+  doi     = {10.1162/evco_a_00242}
+}
+@book{reinhard2010hdr,
+  author    = {Reinhard, Erik and Heidrich, Wolfgang and Debevec, Paul and Pattanaik, Sumanta and Ward, Greg and Myszkowski, Karol},
+  title     = {High Dynamic Range Imaging: Acquisition, Display, and Image-Based Lighting},
+  edition   = {2nd},
+  publisher = {Morgan Kaufmann},
+  year      = {2010}
+}
+@article{eilertsen2017comparative,
+  author  = {Eilertsen, Gabriel and Mantiuk, Rafa{\l} K. and Unger, Jonas},
+  title   = {A comparative review of tone-mapping algorithms for high dynamic range video},
+  journal = {Computer Graphics Forum},
+  volume  = {36},
+  number  = {2},
+  pages   = {565--592},
+  year    = {2017},
+  doi     = {10.1111/cgf.13148}
+}
+@article{ledda2005evaluation,
+  author  = {Ledda, Patrick and Chalmers, Alan and Troscianko, Tom and Seetzen, Helge},
+  title   = {Evaluation of tone mapping operators using a High Dynamic Range display},
+  journal = {ACM Transactions on Graphics},
+  volume  = {24},
+  number  = {3},
+  pages   = {640--648},
+  year    = {2005},
+  doi     = {10.1145/1073204.1073242}
+}
+@article{cadik2008evaluation,
+  author  = {{\v{C}}ad{\'\i}k, Martin and Wimmer, Michael and Neumann, Laszlo and Artusi, Alessandro},
+  title   = {Evaluation of {HDR} tone mapping methods using essential perceptual attributes},
+  journal = {Computers \& Graphics},
+  volume  = {32},
+  number  = {3},
+  pages   = {330--349},
+  year    = {2008},
+  doi     = {10.1016/j.cag.2008.04.003}
+}
+@article{cerdacompany2018which,
+  author  = {Cerd{\'a}-Company, Xim and P{\'a}rraga, C. Alejandro and Otazu, Xavier},
+  title   = {Which tone-mapping operator is the best? {A} comparative study of perceptual quality},
+  journal = {Journal of the Optical Society of America A},
+  volume  = {35},
+  number  = {4},
+  pages   = {626--638},
+  year    = {2018},
+  doi     = {10.1364/JOSAA.35.000626}
+}
+@article{rana2020deep,
+  author  = {Rana, Aakanksha and Singh, Praveer and Valenzise, Giuseppe and Dufaux, Frederic and Komodakis, Nikos and Smolic, Aljosa},
+  title   = {Deep Tone Mapping Operator for High Dynamic Range Images},
+  journal = {IEEE Transactions on Image Processing},
+  volume  = {29},
+  pages   = {1285--1298},
+  year    = {2020},
+  doi     = {10.1109/TIP.2019.2936649}
+}
+
+% ---------------------------------------------------------------- data
+@inproceedings{liu2020single,
+  author    = {Liu, Yu-Lun and Lai, Wei-Sheng and Chen, Yu-Sheng and Kao, Yi-Lung and Yang, Ming-Hsuan and Chuang, Yung-Yu and Huang, Jia-Bin},
+  title     = {Single-Image {HDR} Reconstruction by Learning to Reverse the Camera Pipeline},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {1648--1657},
+  year      = {2020},
+  doi       = {10.1109/CVPR42600.2020.00172},
+  note      = {Source of the HDR-Real and HDR-Synth image sets. Pages per IEEE/Crossref; CVF open access lists 1651--1660}
+}
+@inproceedings{fairchild2007hdr,
+  author    = {Fairchild, Mark D.},
+  title     = {The {HDR} Photographic Survey},
+  booktitle = {Proceedings of the 15th Color Imaging Conference (CIC)},
+  pages     = {233--238},
+  year      = {2007},
+  note      = {HDR-Synth sub-collection "fairchild"}
+}
+@inproceedings{funt2010rehabilitation,
+  author    = {Funt, Brian and Shi, Lilong},
+  title     = {The Rehabilitation of {MaxRGB}},
+  booktitle = {Proceedings of the 18th Color and Imaging Conference (CIC)},
+  pages     = {256--259},
+  year      = {2010},
+  note      = {HDR-Synth sub-collection "funt"}
+}
+@inproceedings{xiao2002high,
+  author    = {Xiao, Feng and DiCarlo, Jeffrey M. and Catrysse, Peter B. and Wandell, Brian A.},
+  title     = {High Dynamic Range Imaging of Natural Scenes},
+  booktitle = {Proceedings of the 10th Color Imaging Conference (CIC)},
+  pages     = {337--342},
+  year      = {2002},
+  note      = {HDR-Synth sub-collection "stanford"}
+}
+
+% ---------------------------------------------------------------- tone-mapping operators (17 benchmarked)
+@article{reinhard2002photographic,
+  author  = {Reinhard, Erik and Stark, Michael and Shirley, Peter and Ferwerda, James},
+  title   = {Photographic tone reproduction for digital images},
+  journal = {ACM Transactions on Graphics (Proc. SIGGRAPH)},
+  volume  = {21},
+  number  = {3},
+  pages   = {267--276},
+  year    = {2002},
+  doi     = {10.1145/566654.566575}
+}
+@article{reinhard2002parameter,
+  author  = {Reinhard, Erik},
+  title   = {Parameter estimation for photographic tone reproduction},
+  journal = {Journal of Graphics Tools},
+  volume  = {7},
+  number  = {1},
+  pages   = {45--51},
+  year    = {2002},
+  doi     = {10.1080/10867651.2002.10487554}
+}
+@article{reinhard2005dynamic,
+  author  = {Reinhard, Erik and Devlin, Kate},
+  title   = {Dynamic range reduction inspired by photoreceptor physiology},
+  journal = {IEEE Transactions on Visualization and Computer Graphics},
+  volume  = {11},
+  number  = {1},
+  pages   = {13--24},
+  year    = {2005},
+  doi     = {10.1109/TVCG.2005.9}
+}
+@article{drago2003adaptive,
+  author  = {Drago, Fr{\'e}d{\'e}ric and Myszkowski, Karol and Annen, Thomas and Chiba, Norishige},
+  title   = {Adaptive logarithmic mapping for displaying high contrast scenes},
+  journal = {Computer Graphics Forum},
+  volume  = {22},
+  number  = {3},
+  pages   = {419--426},
+  year    = {2003},
+  doi     = {10.1111/1467-8659.00689}
+}
+@article{durand2002fast,
+  author  = {Durand, Fr{\'e}do and Dorsey, Julie},
+  title   = {Fast bilateral filtering for the display of high-dynamic-range images},
+  journal = {ACM Transactions on Graphics (Proc. SIGGRAPH)},
+  volume  = {21},
+  number  = {3},
+  pages   = {257--266},
+  year    = {2002},
+  doi     = {10.1145/566654.566574}
+}
+@article{fattal2002gradient,
+  author  = {Fattal, Raanan and Lischinski, Dani and Werman, Michael},
+  title   = {Gradient domain high dynamic range compression},
+  journal = {ACM Transactions on Graphics (Proc. SIGGRAPH)},
+  volume  = {21},
+  number  = {3},
+  pages   = {249--256},
+  year    = {2002},
+  doi     = {10.1145/566654.566573}
+}
+@article{mantiuk2006perceptual,
+  author  = {Mantiuk, Rafa{\l} and Myszkowski, Karol and Seidel, Hans-Peter},
+  title   = {A perceptual framework for contrast processing of high dynamic range images},
+  journal = {ACM Transactions on Applied Perception},
+  volume  = {3},
+  number  = {3},
+  pages   = {286--308},
+  year    = {2006},
+  doi     = {10.1145/1166087.1166095}
+}
+@article{mantiuk2008display,
+  author  = {Mantiuk, Rafa{\l} and Daly, Scott and Kerofsky, Louis},
+  title   = {Display adaptive tone mapping},
+  journal = {ACM Transactions on Graphics (Proc. SIGGRAPH)},
+  volume  = {27},
+  number  = {3},
+  pages   = {68:1--68:10},
+  year    = {2008},
+  doi     = {10.1145/1360612.1360667}
+}
+@inproceedings{pattanaik2000time,
+  author    = {Pattanaik, Sumanta N. and Tumblin, Jack and Yee, Hector and Greenberg, Donald P.},
+  title     = {Time-dependent visual adaptation for fast realistic image display},
+  booktitle = {Proceedings of SIGGRAPH 2000},
+  pages     = {47--54},
+  year      = {2000},
+  doi       = {10.1145/344779.344810}
+}
+@inproceedings{ashikhmin2002tone,
+  author    = {Ashikhmin, Michael},
+  title     = {A tone mapping algorithm for high contrast images},
+  booktitle = {Proceedings of the 13th Eurographics Workshop on Rendering},
+  pages     = {145--156},
+  year      = {2002},
+  doi       = {10.2312/EGWR/EGWR02/145-156}
+}
+@article{mai2011optimizing,
+  author  = {Mai, Zicong and Mansour, Hassan and Mantiuk, Rafal and Nasiopoulos, Panos and Ward, Rabab and Heidrich, Wolfgang},
+  title   = {Optimizing a tone curve for backward-compatible high dynamic range image and video compression},
+  journal = {IEEE Transactions on Image Processing},
+  volume  = {20},
+  number  = {6},
+  pages   = {1558--1571},
+  year    = {2011},
+  doi     = {10.1109/TIP.2010.2095866}
+}
+@article{lischinski2006interactive,
+  author  = {Lischinski, Dani and Farbman, Zeev and Uyttendaele, Matt and Szeliski, Richard},
+  title   = {Interactive local adjustment of tonal values},
+  journal = {ACM Transactions on Graphics (Proc. SIGGRAPH)},
+  volume  = {25},
+  number  = {3},
+  pages   = {646--653},
+  year    = {2006},
+  doi     = {10.1145/1141911.1141936}
+}
+@article{vanhateren2006encoding,
+  author  = {van Hateren, J. H.},
+  title   = {Encoding of high dynamic range video with a model of human cones},
+  journal = {ACM Transactions on Graphics},
+  volume  = {25},
+  number  = {4},
+  pages   = {1380--1399},
+  year    = {2006},
+  doi     = {10.1145/1183287.1183293}
+}
+@inproceedings{kim2008consistent,
+  author    = {Kim, Min H. and Kautz, Jan},
+  title     = {Consistent Tone Reproduction},
+  booktitle = {Proceedings of the 10th IASTED International Conference on Computer Graphics and Imaging (CGIM 2008)},
+  pages     = {152--159},
+  address   = {Innsbruck, Austria},
+  year      = {2008}
+}
+@article{khan2018tone,
+  author  = {Khan, Ishtiaq Rasool and Rahardja, Susanto and Khan, Muhammad Murtaza and Movania, Muhammad Mobeen and Abed, Fidaa},
+  title   = {A tone-mapping technique based on histogram using a sensitivity model of the human visual system},
+  journal = {IEEE Transactions on Industrial Electronics},
+  volume  = {65},
+  number  = {4},
+  pages   = {3469--3479},
+  year    = {2018},
+  doi     = {10.1109/TIE.2017.2760247},
+  note    = {ATT operator}
+}
+@article{li2024contrastive,
+  author  = {Li, Di and Wang, Mou and Rahardja, Susanto},
+  title   = {Contrastive learning for deep tone mapping operator},
+  journal = {Signal Processing: Image Communication},
+  volume  = {126},
+  pages   = {117130},
+  year    = {2024},
+  doi     = {10.1016/j.image.2024.117130},
+  note    = {CATMO; code github.com/xslidi/CATMO}
+}
+@article{cao2023unsupervised,
+  author  = {Cao, Cong and Yue, Huanjing and Liu, Xin and Yang, Jingyu},
+  title   = {Unsupervised {HDR} Image and Video Tone Mapping via Contrastive Learning},
+  journal = {IEEE Transactions on Circuits and Systems for Video Technology},
+  volume  = {34},
+  number  = {2},
+  pages   = {786--798},
+  year    = {2024},
+  doi     = {10.1109/TCSVT.2023.3290351},
+  note    = {UnCLTMO; early access 2023; arXiv:2303.07327}
+}
+@inproceedings{vinker2021unpaired,
+  author    = {Vinker, Yael and Huberman-Spiegelglas, Inbar and Fattal, Raanan},
+  title     = {Unpaired Learning for High Dynamic Range Image Tone Mapping},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  pages     = {14637--14646},
+  year      = {2021},
+  doi       = {10.1109/ICCV48922.2021.01439},
+  note      = {Unpaired-HDR. Pages per IEEE/Crossref; the CVF open-access version lists 14657--14666}
+}
+
+% ---------------------------------------------------------------- software
+@misc{luminancehdr,
+  author       = {{Luminance HDR contributors}},
+  title        = {Luminance {HDR} (luminance-hdr-cli), version 2.6.1.1},
+  howpublished = {\url{https://github.com/LuminanceHDR/LuminanceHDR}},
+  note         = {Ubuntu 24.04 package luminance-hdr 2.6.1.1+dfsg-3build3}
+}
+@misc{volgyes_tmqi,
+  author       = {V{\"o}lgyes, David},
+  title        = {{TMQI}: tone mapped image quality index, {Python} port (tmqi-revised)},
+  howpublished = {\url{https://github.com/dvolgyes/TMQI}},
+  note         = {commit 369754268a3a68905549ead78bd953fdd84840ac}
+}
+@article{pedregosa2011scikit,
+  author  = {Pedregosa, F. and Varoquaux, G. and Gramfort, A. and Michel, V. and Thirion, B. and Grisel, O. and Blondel, M. and Prettenhofer, P. and Weiss, R. and Dubourg, V. and Vanderplas, J. and Passos, A. and Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, {\'E}.},
+  title   = {Scikit-learn: Machine Learning in {P}ython},
+  journal = {Journal of Machine Learning Research},
+  volume  = {12},
+  pages   = {2825--2830},
+  year    = {2011}
+}
+
+% ---------------------------------------------------------------- quality metrics
+@article{yeganeh2013objective,
+  author  = {Yeganeh, Hojatollah and Wang, Zhou},
+  title   = {Objective quality assessment of tone-mapped images},
+  journal = {IEEE Transactions on Image Processing},
+  volume  = {22},
+  number  = {2},
+  pages   = {657--667},
+  year    = {2013},
+  doi     = {10.1109/TIP.2012.2221725},
+  note    = {TMQI}
+}
+@article{wang2004image,
+  author  = {Wang, Zhou and Bovik, Alan C. and Sheikh, Hamid R. and Simoncelli, Eero P.},
+  title   = {Image quality assessment: from error visibility to structural similarity},
+  journal = {IEEE Transactions on Image Processing},
+  volume  = {13},
+  number  = {4},
+  pages   = {600--612},
+  year    = {2004},
+  doi     = {10.1109/TIP.2003.819861}
+}
+@article{nafchi2015fsitm,
+  author  = {Ziaei Nafchi, Hossein and Shahkolaei, Atena and Farrahi Moghaddam, Reza and Cheriet, Mohamed},
+  title   = {{FSITM}: A Feature Similarity Index For Tone-Mapped Images},
+  journal = {IEEE Signal Processing Letters},
+  volume  = {22},
+  number  = {8},
+  pages   = {1026--1029},
+  year    = {2015},
+  doi     = {10.1109/LSP.2014.2381458}
+}
+@article{ma2015high,
+  author  = {Ma, Kede and Yeganeh, Hojatollah and Zeng, Kai and Wang, Zhou},
+  title   = {High dynamic range image compression by optimizing tone mapped image quality index},
+  journal = {IEEE Transactions on Image Processing},
+  volume  = {24},
+  number  = {10},
+  pages   = {3086--3097},
+  year    = {2015},
+  doi     = {10.1109/TIP.2015.2436340},
+  note    = {TMQI-II}
+}
+
+% ---------------------------------------------------------------- HDR features (the 14 groups and what they build on)
+@article{hulusic2017model,
+  author  = {Hulusic, Vedad and Debattista, Kurt and Valenzise, Giuseppe and Dufaux, Fr{\'e}d{\'e}ric},
+  title   = {A model of perceived dynamic range for {HDR} images},
+  journal = {Signal Processing: Image Communication},
+  volume  = {51},
+  pages   = {26--39},
+  year    = {2017},
+  doi     = {10.1016/j.image.2016.11.005}
+}
+@inproceedings{pouli2010image,
+  author    = {Pouli, Tania and Cunningham, Douglas W. and Reinhard, Erik},
+  title     = {Image Statistics and their Applications in Computer Graphics},
+  booktitle = {Eurographics 2010 -- State of the Art Reports},
+  editor    = {Hauser, Helwig and Reinhard, Erik},
+  pages     = {83--112},
+  year      = {2010},
+  doi       = {10.2312/egst.20101063}
+}
+@article{akyuz2006color,
+  author  = {Aky{\"u}z, Ahmet O{\u{g}}uz and Reinhard, Erik},
+  title   = {Color appearance in high-dynamic-range imaging},
+  journal = {Journal of Electronic Imaging},
+  volume  = {15},
+  number  = {3},
+  pages   = {033001},
+  year    = {2006},
+  doi     = {10.1117/1.2238891}
+}
+@inproceedings{hasler2003measuring,
+  author    = {Hasler, David and S{\"u}sstrunk, Sabine},
+  title     = {Measuring colourfulness in natural images},
+  booktitle = {Human Vision and Electronic Imaging VIII, Proc. SPIE 5007},
+  pages     = {87--95},
+  year      = {2003},
+  doi       = {10.1117/12.477378}
+}
+@inproceedings{mantiuk2021pu21,
+  author    = {Mantiuk, Rafa{\l} K. and Azimi, Maryam},
+  title     = {{PU21}: A novel perceptually uniform encoding for adapting existing quality metrics for {HDR}},
+  booktitle = {Picture Coding Symposium (PCS)},
+  pages     = {1--5},
+  year      = {2021},
+  doi       = {10.1109/PCS50896.2021.9477471}
+}
+@inproceedings{aydin2008extending,
+  author    = {Aydın, Tunç Ozan and Mantiuk, Rafał and Seidel, Hans-Peter},
+  title     = {Extending quality metrics to full luminance range images},
+  booktitle = {Human Vision and Electronic Imaging XIII, Proc. SPIE 6806},
+  pages     = {68060B},
+  year      = {2008},
+  doi       = {10.1117/12.765095}
+}
+@article{mittal2012no,
+  author  = {Mittal, Anish and Moorthy, Anush Krishna and Bovik, Alan Conrad},
+  title   = {No-reference image quality assessment in the spatial domain},
+  journal = {IEEE Transactions on Image Processing},
+  volume  = {21},
+  number  = {12},
+  pages   = {4695--4708},
+  year    = {2012},
+  doi     = {10.1109/TIP.2012.2214050},
+  note    = {BRISQUE}
+}
+@article{kundu2017no,
+  author  = {Kundu, Debarati and Ghadiyaram, Deepti and Bovik, Alan C. and Evans, Brian L.},
+  title   = {No-reference quality assessment of tone-mapped {HDR} pictures},
+  journal = {IEEE Transactions on Image Processing},
+  volume  = {26},
+  number  = {6},
+  pages   = {2957--2971},
+  year    = {2017},
+  doi     = {10.1109/TIP.2017.2685941}
+}
+@techreport{itup910,
+  author      = {{ITU-T}},
+  title       = {Recommendation {P.910}: Subjective video quality assessment methods for multimedia applications},
+  institution = {International Telecommunication Union},
+  year        = {2023},
+  note        = {Spatial perceptual information (SI)}
+}
+@article{burt1983laplacian,
+  author  = {Burt, Peter J. and Adelson, Edward H.},
+  title   = {The {L}aplacian pyramid as a compact image code},
+  journal = {IEEE Transactions on Communications},
+  volume  = {31},
+  number  = {4},
+  pages   = {532--540},
+  year    = {1983},
+  doi     = {10.1109/TCOM.1983.1095851}
+}
+@article{ruderman1998statistics,
+  author  = {Ruderman, Daniel L. and Cronin, Thomas W. and Chiao, Chuan-Chin},
+  title   = {Statistics of cone responses to natural images: implications for visual coding},
+  journal = {Journal of the Optical Society of America A},
+  volume  = {15},
+  number  = {8},
+  pages   = {2036--2045},
+  year    = {1998},
+  doi     = {10.1364/JOSAA.15.002036}
+}
+@article{reinhard2001color,
+  author  = {Reinhard, Erik and Ashikhmin, Michael and Gooch, Bruce and Shirley, Peter},
+  title   = {Color transfer between images},
+  journal = {IEEE Computer Graphics and Applications},
+  volume  = {21},
+  number  = {5},
+  pages   = {34--41},
+  year    = {2001},
+  doi     = {10.1109/38.946629}
+}
+
+% ---------------------------------------------------------------- learning and statistics
+@inproceedings{ke2017lightgbm,
+  author    = {Ke, Guolin and Meng, Qi and Finley, Thomas and Wang, Taifeng and Chen, Wei and Ma, Weidong and Ye, Qiwei and Liu, Tie-Yan},
+  title     = {{LightGBM}: A Highly Efficient Gradient Boosting Decision Tree},
+  booktitle = {Advances in Neural Information Processing Systems 30 (NeurIPS)},
+  pages     = {3146--3154},
+  year      = {2017}
+}
+@article{breiman1996bagging,
+  author  = {Breiman, Leo},
+  title   = {Bagging predictors},
+  journal = {Machine Learning},
+  volume  = {24},
+  number  = {2},
+  pages   = {123--140},
+  year    = {1996},
+  doi     = {10.1007/BF00058655}
+}
+@article{breiman2001random,
+  author  = {Breiman, Leo},
+  title   = {Random Forests},
+  journal = {Machine Learning},
+  volume  = {45},
+  number  = {1},
+  pages   = {5--32},
+  year    = {2001},
+  doi     = {10.1023/A:1010933404324}
+}
+@article{geurts2006extremely,
+  author  = {Geurts, Pierre and Ernst, Damien and Wehenkel, Louis},
+  title   = {Extremely randomized trees},
+  journal = {Machine Learning},
+  volume  = {63},
+  number  = {1},
+  pages   = {3--42},
+  year    = {2006},
+  doi     = {10.1007/s10994-006-6226-1}
+}
+@techreport{burges2010ranknet,
+  author      = {Burges, Christopher J. C.},
+  title       = {From {RankNet} to {LambdaRank} to {LambdaMART}: An Overview},
+  institution = {Microsoft Research},
+  number      = {MSR-TR-2010-82},
+  year        = {2010}
+}
+@article{wilcoxon1945individual,
+  author  = {Wilcoxon, Frank},
+  title   = {Individual comparisons by ranking methods},
+  journal = {Biometrics Bulletin},
+  volume  = {1},
+  number  = {6},
+  pages   = {80--83},
+  year    = {1945},
+  doi     = {10.2307/3001968}
+}
+@article{holm1979simple,
+  author  = {Holm, Sture},
+  title   = {A simple sequentially rejective multiple test procedure},
+  journal = {Scandinavian Journal of Statistics},
+  volume  = {6},
+  number  = {2},
+  pages   = {65--70},
+  year    = {1979}
+}
+@book{efron1993introduction,
+  author    = {Efron, Bradley and Tibshirani, Robert J.},
+  title     = {An Introduction to the Bootstrap},
+  publisher = {Chapman \& Hall},
+  year      = {1993}
+}
+@article{varma2006bias,
+  author  = {Varma, Sudhir and Simon, Richard},
+  title   = {Bias in error estimation when using cross-validation for model selection},
+  journal = {BMC Bioinformatics},
+  volume  = {7},
+  pages   = {91},
+  year    = {2006},
+  doi     = {10.1186/1471-2105-7-91}
+}
+@article{cawley2010over,
+  author  = {Cawley, Gavin C. and Talbot, Nicola L. C.},
+  title   = {On over-fitting in model selection and subsequent selection bias in performance evaluation},
+  journal = {Journal of Machine Learning Research},
+  volume  = {11},
+  pages   = {2079--2107},
+  year    = {2010}
+}

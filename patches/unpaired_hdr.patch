@@ -1,0 +1,88 @@
+diff --git a/activate_trained_model/run_trained_model.py b/activate_trained_model/run_trained_model.py
+index 1707168..cdb302b 100644
+--- a/activate_trained_model/run_trained_model.py
++++ b/activate_trained_model/run_trained_model.py
+@@ -31,15 +31,22 @@ def get_args():
+     # lambda calc params
+     parser.add_argument("--mean_hist_path", type=str, default=default_params["mean_hist_path"])
+     parser.add_argument("--lambda_output_path", type=str, default=default_params["lambda_output_path"])
+-    parser.add_argument("--bins", type=str, default=default_params["bins"])
++    # PATCH: was type=str, which made np.histogram(bins="20") fail inside
++    # calc_lambda. bins is a count.
++    parser.add_argument("--bins", type=int, default=default_params["bins"])
+     args = parser.parse_args()
+     # print_args(args)
+     return args
+ 
+ 
+ def run_trained_model(args):
+-    args.f_factor_path = adaptive_lambda.calc_lambda(args.f_factor_path, extensions, args.input_images_path,
+-                                                args.mean_hist_path, args.lambda_output_path, args.bins)
++    # PATCH: calc_lambda returns None when every input image is already present
++    # in f_factor_path (it then leaves the dict untouched). Keep the original
++    # path in that case instead of clobbering it with None. Mirrors UnCLTMO.
++    _new_f = adaptive_lambda.calc_lambda(args.f_factor_path, extensions, args.input_images_path,
++                                         args.mean_hist_path, args.lambda_output_path, args.bins)
++    if _new_f:
++        args.f_factor_path = _new_f
+     start = time.time()
+     net_path = os.path.join(args.model_path, "trained_weights.pth")
+     train_settings_path = os.path.join(args.model_path, "run_settings.npy")
+@@ -48,7 +55,14 @@ def run_trained_model(args):
+     # model_params["factor_coeff"] = 0.2
+     if not os.path.exists(output_images_path):
+         os.makedirs(output_images_path)
+-    device = torch.device("cuda" if (torch.cuda.is_available() and torch.cuda.device_count() > 0) else "cpu")
++    # MPS PATCH: prefer CUDA, then Apple MPS, then CPU. Checkpoints are loaded
++    # with map_location=device below, so weights follow the chosen device.
++    if torch.cuda.is_available() and torch.cuda.device_count() > 0:
++        device = torch.device("cuda")
++    elif getattr(torch.backends, "mps", None) is not None and torch.backends.mps.is_available():
++        device = torch.device("mps")
++    else:
++        device = torch.device("cpu")
+     run_model_on_path(model_params, device, net_path, args.input_images_path,
+                       output_images_path, args.f_factor_path, None, model_params["final_shape_addition"])
+     print("tone mapping took [%.2f] seconds" % (time.time() - start))
+diff --git a/utils/hdr_image_util.py b/utils/hdr_image_util.py
+index 065d4b5..479ff14 100644
+--- a/utils/hdr_image_util.py
++++ b/utils/hdr_image_util.py
+@@ -36,7 +36,19 @@ def read_hdr_image(path):
+     path_lib_path = pathlib.Path(path)
+     file_extension = os.path.splitext(path)[1]
+     if file_extension == ".hdr":
+-        im = imageio.imread(path_lib_path, format="HDR-FI").astype('float32')
++        try:
++            im = imageio.imread(path_lib_path, format="HDR-FI").astype('float32')
++        except Exception:
++            # macOS PATCH: imageio's FreeImage HDR-FI plugin is broken on this
++            # imageio/Python build and silently truncates/raises instead of
++            # returning linear float radiance. OpenCV decodes the same Radiance
++            # .hdr to full-range linear float; convert BGR->RGB to match imageio's
++            # channel order. Mirrors the CATMO/UnCLTMO adapters' fix.
++            import cv2
++            bgr = cv2.imread(str(path_lib_path), cv2.IMREAD_ANYDEPTH | cv2.IMREAD_COLOR)
++            if bgr is None:
++                raise
++            im = cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB).astype('float32')
+     elif file_extension == ".dng":
+         im = imageio.imread(path_lib_path, format="RAW-FI").astype('float32')
+     elif file_extension == ".exr":
+@@ -239,8 +251,14 @@ def save_gray_tensor_as_numpy_stretch(tensor, output_path, im_name):
+     im = (tensor_0_1 * 255).astype('uint8')
+     if not os.path.exists(output_path):
+         os.mkdir(output_path)
+-    imageio.imwrite(os.path.join(output_path, im_name + ".png"), im, format='PNG-FI')
+-    print("result was saved to [%s]" % (os.path.join(output_path, im_name + ".png")))
++    out_file = os.path.join(output_path, im_name + ".png")
++    try:
++        imageio.imwrite(out_file, im, format='PNG-FI')
++    except Exception:
++        # macOS PATCH: FreeImage PNG-FI writer unavailable on this build; use the
++        # default PNG writer. Output is an identical 8-bit RGB PNG (no gamma).
++        imageio.imwrite(out_file, im)
++    print("result was saved to [%s]" % (out_file,))
+ 
+ 
+ def save_gray_tensor_as_numpy_stretch_entire_range(tensor, output_path, im_name):

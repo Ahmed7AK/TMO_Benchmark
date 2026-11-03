@@ -1,0 +1,4 @@
+source,n_images,baseline_Q,oracle_Q,selector_Q,gap_recovered,exact_accuracy,baseline_win_rate
+HDR-Real,626,0.930285,0.95804,0.954845,0.884874,0.64377,0.070288
+HDR-Synth,366,0.944875,0.971093,0.967706,0.870819,0.666667,0.101093
+all,992,0.935668,0.962856,0.95959,0.879874,0.652218,0.081653

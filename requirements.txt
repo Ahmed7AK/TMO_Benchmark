@@ -1,0 +1,14 @@
+numpy==2.5.0
+opencv-python==4.13.0.92
+imageio==2.37.3
+pillow==12.2.0
+scipy==1.18.0
+scikit-image==0.26.0
+pandas==2.3.3
+scikit-learn==1.7.2
+lightgbm==4.6.0
+joblib==1.5.3
+matplotlib==3.11.0
+# tmqi-revised depends on the abandoned PyContracts; tmo_pipeline.py stubs it
+# out at runtime so PyContracts is intentionally NOT installed.
+tmqi-revised @ git+https://github.com/dvolgyes/TMQI@369754268a3a68905549ead78bd953fdd84840ac

@@ -1,0 +1,16 @@
+group,n_features,source_auc
+hdr22,21,0.9213
+hulusic17,5,0.7262
+pouli10,27,0.9103
+reinhard02,5,0.8619
+drago03,2,0.5523
+durand02,4,0.6725
+fattal02,6,0.6805
+reinhard05,2,0.5117
+kimkautz08,2,0.838
+mai11,2,0.6296
+mantiuk08,12,0.7056
+tmqi,10,0.6676
+brisque,36,0.8585
+si,1,0.5299
+tmqiblock,37,0.7676

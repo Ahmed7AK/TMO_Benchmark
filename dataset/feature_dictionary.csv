@@ -1,0 +1,175 @@
+feature,group,source,measures
+h17_dr,hulusic17,"Hulusic et al. 2017, Signal Process. Image Commun. 51","perceived dynamic range: DR, image key, bright area, PU21 contrast, colourfulness"
+h17_ik,hulusic17,"Hulusic et al. 2017, Signal Process. Image Commun. 51","perceived dynamic range: DR, image key, bright area, PU21 contrast, colourfulness"
+h17_area,hulusic17,"Hulusic et al. 2017, Signal Process. Image Commun. 51","perceived dynamic range: DR, image key, bright area, PU21 contrast, colourfulness"
+h17_contrast,hulusic17,"Hulusic et al. 2017, Signal Process. Image Commun. 51","perceived dynamic range: DR, image key, bright area, PU21 contrast, colourfulness"
+h17_colourfulness,hulusic17,"Hulusic et al. 2017, Signal Process. Image Commun. 51","perceived dynamic range: DR, image key, bright area, PU21 contrast, colourfulness"
+p10_logl_mean,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_logl_std,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_logl_skew,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_logl_kurt,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_spectral_slope,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_spectral_intercept,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_grad_dx_std,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_grad_dx_kurt,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_grad_dy_std,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_grad_dy_kurt,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_grad_mag_mean,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_grad_mag_std,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_grad_mag_kurt,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_band0_std,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_band0_kurt,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_band1_std,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_band1_kurt,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_band2_std,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_band2_kurt,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_band3_std,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_band3_kurt,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_lab_L_mean,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_lab_L_std,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_lab_alpha_mean,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_lab_alpha_std,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_lab_beta_mean,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+p10_lab_beta_std,pouli10,"Pouli, Cunningham & Reinhard 2010, Eurographics STAR","HDR image statistics: log-luminance moments, power-spectrum slope, gradients, band-pass statistics, Lαβ colour"
+r02_log_avg,reinhard02,"Reinhard et al. 2002, SIGGRAPH; Reinhard 2002, J. Graphics Tools 7(1)","photographic operator set-up: log-average, white point, automatic key"
+r02_log2_white_default,reinhard02,"Reinhard et al. 2002, SIGGRAPH; Reinhard 2002, J. Graphics Tools 7(1)","photographic operator set-up: log-average, white point, automatic key"
+r02_key_est,reinhard02,"Reinhard et al. 2002, SIGGRAPH; Reinhard 2002, J. Graphics Tools 7(1)","photographic operator set-up: log-average, white point, automatic key"
+r02_log2_white_est,reinhard02,"Reinhard et al. 2002, SIGGRAPH; Reinhard 2002, J. Graphics Tools 7(1)","photographic operator set-up: log-average, white point, automatic key"
+r02_zones,reinhard02,"Reinhard et al. 2002, SIGGRAPH; Reinhard 2002, J. Graphics Tools 7(1)","photographic operator set-up: log-average, white point, automatic key"
+d03_log10_max_over_av,drago03,"Drago et al. 2003, Comput. Graph. Forum 22(3)","adaptive log mapping set-up: Lwmax/Lwa, log base"
+d03_divider,drago03,"Drago et al. 2003, Comput. Graph. Forum 22(3)","adaptive log mapping set-up: Lwmax/Lwa, log base"
+d02_base_range,durand02,"Durand & Dorsey 2002, SIGGRAPH","bilateral base-layer range, compression factor, detail energy"
+d02_compression,durand02,"Durand & Dorsey 2002, SIGGRAPH","bilateral base-layer range, compression factor, detail energy"
+d02_detail_std,durand02,"Durand & Dorsey 2002, SIGGRAPH","bilateral base-layer range, compression factor, detail energy"
+d02_detail_absmean,durand02,"Durand & Dorsey 2002, SIGGRAPH","bilateral base-layer range, compression factor, detail energy"
+f02_avg_grad3,fattal02,"Fattal, Lischinski & Werman 2002, SIGGRAPH","gradient-domain set-up: average gradient, attenuation at pyramid levels 3-5"
+f02_rel_loggrad3,fattal02,"Fattal, Lischinski & Werman 2002, SIGGRAPH","gradient-domain set-up: average gradient, attenuation at pyramid levels 3-5"
+f02_avg_grad4,fattal02,"Fattal, Lischinski & Werman 2002, SIGGRAPH","gradient-domain set-up: average gradient, attenuation at pyramid levels 3-5"
+f02_rel_loggrad4,fattal02,"Fattal, Lischinski & Werman 2002, SIGGRAPH","gradient-domain set-up: average gradient, attenuation at pyramid levels 3-5"
+f02_avg_grad5,fattal02,"Fattal, Lischinski & Werman 2002, SIGGRAPH","gradient-domain set-up: average gradient, attenuation at pyramid levels 3-5"
+f02_rel_loggrad5,fattal02,"Fattal, Lischinski & Werman 2002, SIGGRAPH","gradient-domain set-up: average gradient, attenuation at pyramid levels 3-5"
+r05_key,reinhard05,"Reinhard & Devlin 2005, IEEE TVCG 11(1)","photoreceptor operator: image key, contrast m"
+r05_contrast_m,reinhard05,"Reinhard & Devlin 2005, IEEE TVCG 11(1)","photoreceptor operator: image key, contrast m"
+kk08_mu,kimkautz08,"Kim & Kautz 2008, APGV","consistent tone reproduction: log-mean, compression k1"
+kk08_k1,kimkautz08,"Kim & Kautz 2008, APGV","consistent tone reproduction: log-mean, compression k1"
+m11_sum_p13,mai11,"Mai et al. 2011, IEEE TIP 20(6)",optimal tone curve: log10 histogram statistics
+m11_max_slope_share,mai11,"Mai et al. 2011, IEEE TIP 20(6)",optimal tone curve: log10 histogram statistics
+m08_absG_mean0,mantiuk08,"Mantiuk, Daly & Kerofsky 2008, ACM TOG 27(5)",display-adaptive TMO: band-contrast distribution per Laplacian level
+m08_absG_p90_0,mantiuk08,"Mantiuk, Daly & Kerofsky 2008, ACM TOG 27(5)",display-adaptive TMO: band-contrast distribution per Laplacian level
+m08_dark_minus_bright0,mantiuk08,"Mantiuk, Daly & Kerofsky 2008, ACM TOG 27(5)",display-adaptive TMO: band-contrast distribution per Laplacian level
+m08_absG_mean1,mantiuk08,"Mantiuk, Daly & Kerofsky 2008, ACM TOG 27(5)",display-adaptive TMO: band-contrast distribution per Laplacian level
+m08_absG_p90_1,mantiuk08,"Mantiuk, Daly & Kerofsky 2008, ACM TOG 27(5)",display-adaptive TMO: band-contrast distribution per Laplacian level
+m08_dark_minus_bright1,mantiuk08,"Mantiuk, Daly & Kerofsky 2008, ACM TOG 27(5)",display-adaptive TMO: band-contrast distribution per Laplacian level
+m08_absG_mean2,mantiuk08,"Mantiuk, Daly & Kerofsky 2008, ACM TOG 27(5)",display-adaptive TMO: band-contrast distribution per Laplacian level
+m08_absG_p90_2,mantiuk08,"Mantiuk, Daly & Kerofsky 2008, ACM TOG 27(5)",display-adaptive TMO: band-contrast distribution per Laplacian level
+m08_dark_minus_bright2,mantiuk08,"Mantiuk, Daly & Kerofsky 2008, ACM TOG 27(5)",display-adaptive TMO: band-contrast distribution per Laplacian level
+m08_absG_mean3,mantiuk08,"Mantiuk, Daly & Kerofsky 2008, ACM TOG 27(5)",display-adaptive TMO: band-contrast distribution per Laplacian level
+m08_absG_p90_3,mantiuk08,"Mantiuk, Daly & Kerofsky 2008, ACM TOG 27(5)",display-adaptive TMO: band-contrast distribution per Laplacian level
+m08_dark_minus_bright3,mantiuk08,"Mantiuk, Daly & Kerofsky 2008, ACM TOG 27(5)",display-adaptive TMO: band-contrast distribution per Laplacian level
+tmqi_vis0,tmqi,"Yeganeh & Wang 2013, IEEE TIP 22(2)",TMQI's HDR-side local standard deviation at 5 scales
+tmqi_logsig_rel0,tmqi,"Yeganeh & Wang 2013, IEEE TIP 22(2)",TMQI's HDR-side local standard deviation at 5 scales
+tmqi_vis1,tmqi,"Yeganeh & Wang 2013, IEEE TIP 22(2)",TMQI's HDR-side local standard deviation at 5 scales
+tmqi_logsig_rel1,tmqi,"Yeganeh & Wang 2013, IEEE TIP 22(2)",TMQI's HDR-side local standard deviation at 5 scales
+tmqi_vis2,tmqi,"Yeganeh & Wang 2013, IEEE TIP 22(2)",TMQI's HDR-side local standard deviation at 5 scales
+tmqi_logsig_rel2,tmqi,"Yeganeh & Wang 2013, IEEE TIP 22(2)",TMQI's HDR-side local standard deviation at 5 scales
+tmqi_vis3,tmqi,"Yeganeh & Wang 2013, IEEE TIP 22(2)",TMQI's HDR-side local standard deviation at 5 scales
+tmqi_logsig_rel3,tmqi,"Yeganeh & Wang 2013, IEEE TIP 22(2)",TMQI's HDR-side local standard deviation at 5 scales
+tmqi_vis4,tmqi,"Yeganeh & Wang 2013, IEEE TIP 22(2)",TMQI's HDR-side local standard deviation at 5 scales
+tmqi_logsig_rel4,tmqi,"Yeganeh & Wang 2013, IEEE TIP 22(2)",TMQI's HDR-side local standard deviation at 5 scales
+bq0_alpha,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq0_var,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq0_h_alpha,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq0_h_mean,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq0_h_lvar,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq0_h_rvar,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq0_v_alpha,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq0_v_mean,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq0_v_lvar,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq0_v_rvar,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq0_d1_alpha,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq0_d1_mean,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq0_d1_lvar,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq0_d1_rvar,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq0_d2_alpha,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq0_d2_mean,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq0_d2_lvar,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq0_d2_rvar,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq1_alpha,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq1_var,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq1_h_alpha,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq1_h_mean,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq1_h_lvar,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq1_h_rvar,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq1_v_alpha,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq1_v_mean,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq1_v_lvar,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq1_v_rvar,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq1_d1_alpha,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq1_d1_mean,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq1_d1_lvar,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq1_d1_rvar,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq1_d2_alpha,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq1_d2_mean,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq1_d2_lvar,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+bq1_d2_rvar,brisque,"Mittal, Moorthy & Bovik 2012, IEEE TIP 21(12)",BRISQUE natural-scene statistics on log luminance
+si_p910,si,ITU-T Rec. P.910,spatial perceptual information on log luminance
+k11_sd_mean,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k11_sd_p10,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k11_sd_p50,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k11_sd_p90,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k11_range_mean,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k11_frac_sd_gt05,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k11_frac_sd_gt1,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k11_mean_sd_corr,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k11_blockmean_std,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k11_b0_sd,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k11_b0_share,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k11_b1_sd,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k11_b1_share,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k11_b2_sd,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k11_b2_share,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k11_b3_sd,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k11_b3_share,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k11_b4_sd,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k11_b4_share,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k22_sd_mean,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k22_sd_p10,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k22_sd_p50,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k22_sd_p90,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k22_range_mean,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k22_frac_sd_gt05,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k22_frac_sd_gt1,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k22_mean_sd_corr,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k22_blockmean_std,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k44_sd_mean,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k44_sd_p10,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k44_sd_p50,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k44_sd_p90,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k44_range_mean,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k44_frac_sd_gt05,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k44_frac_sd_gt1,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k44_mean_sd_corr,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+k44_blockmean_std,tmqiblock,Yeganeh & Wang 2013 (adapted),11/22/44-px block statistics of log luminance
+hist_log10_min,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_log10_max,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+n_pixels,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_bin_01,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_bin_02,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_bin_03,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_bin_04,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_bin_05,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_bin_06,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_bin_07,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_bin_08,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_bin_09,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_bin_10,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_frac_01,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_frac_02,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_frac_03,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_frac_04,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_frac_05,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_frac_06,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_frac_07,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_frac_08,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_frac_09,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"
+hist_frac_10,histogram,this export (export_dataset.py),"10-bin histogram of log10 HDR luminance, per-image min-max range"

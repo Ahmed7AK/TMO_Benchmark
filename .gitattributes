@@ -1,0 +1,11 @@
+# Binary files: never convert line endings (Windows clones)
+*.hdr binary
+*.exr binary
+*.png binary
+*.pth binary
+*.npy binary
+# Files run inside Linux / Docker must keep LF endings
+*.sh text eol=lf
+Makefile text eol=lf
+Dockerfile text eol=lf
+*.sha256 text eol=lf

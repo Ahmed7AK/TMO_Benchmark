@@ -1,0 +1,22 @@
+operator,image,path,error,when
+ashikhmin,10071,images/10071.hdr,degenerate output (rejected),2026-10-07T21:51:49
+vanhateren,10137,images/10137.hdr,degenerate output (rejected),2026-10-07T21:57:14
+vanhateren,10138,images/10138.hdr,degenerate output (rejected),2026-10-07T21:57:19
+ashikhmin,10690,images/10690.hdr,degenerate output (rejected),2026-10-07T22:40:03
+vanhateren,10690,images/10690.hdr,degenerate output (rejected),2026-10-07T22:40:04
+kimkautz,10690,images/10690.hdr,degenerate output (rejected),2026-10-07T22:40:04
+ashikhmin,10693,images/10693.hdr,degenerate output (rejected),2026-10-07T22:40:12
+vanhateren,10693,images/10693.hdr,degenerate output (rejected),2026-10-07T22:40:12
+kimkautz,10693,images/10693.hdr,degenerate output (rejected),2026-10-07T22:40:12
+ashikhmin,10987,images/10987.hdr,degenerate output (rejected),2026-10-07T22:57:22
+vanhateren,10987,images/10987.hdr,degenerate output (rejected),2026-10-07T22:57:22
+kimkautz,10987,images/10987.hdr,degenerate output (rejected),2026-10-07T22:57:22
+ashikhmin,10992,images/10992.hdr,degenerate output (rejected),2026-10-07T22:57:39
+vanhateren,10992,images/10992.hdr,degenerate output (rejected),2026-10-07T22:57:40
+kimkautz,10992,images/10992.hdr,degenerate output (rejected),2026-10-07T22:57:40
+ashikhmin,10998,images/10998.hdr,"Command '['docker', 'run', '--rm', '-v', '/Users/ahmed/code/AIMI Research/TMO/images:/input', '-v', '/Users/ahmed/code/AIMI Research/TMO/tmo_outputs:/output', 'lhdr', '-l', '/input/10998.hdr', '--tmo', 'ashikhmin', '-o', '/output/10998__ashikhmin.png']' returned non-zero exit status 1.",2026-10-07T22:58:00
+vanhateren,10998,images/10998.hdr,"Command '['docker', 'run', '--rm', '-v', '/Users/ahmed/code/AIMI Research/TMO/images:/input', '-v', '/Users/ahmed/code/AIMI Research/TMO/tmo_outputs:/output', 'lhdr', '-l', '/input/10998.hdr', '--tmo', 'vanhateren', '-o', '/output/10998__vanhateren.png']' returned non-zero exit status 1.",2026-10-07T22:58:00
+kimkautz,10998,images/10998.hdr,"Command '['docker', 'run', '--rm', '-v', '/Users/ahmed/code/AIMI Research/TMO/images:/input', '-v', '/Users/ahmed/code/AIMI Research/TMO/tmo_outputs:/output', 'lhdr', '-l', '/input/10998.hdr', '--tmo', 'kimkautz', '-o', '/output/10998__kimkautz.png']' returned non-zero exit status 1.",2026-10-07T22:58:00
+ashikhmin,10999,images/10999.hdr,"Command '['docker', 'run', '--rm', '-v', '/Users/ahmed/code/AIMI Research/TMO/images:/input', '-v', '/Users/ahmed/code/AIMI Research/TMO/tmo_outputs:/output', 'lhdr', '-l', '/input/10999.hdr', '--tmo', 'ashikhmin', '-o', '/output/10999__ashikhmin.png']' returned non-zero exit status 1.",2026-10-07T22:58:03
+vanhateren,10999,images/10999.hdr,"Command '['docker', 'run', '--rm', '-v', '/Users/ahmed/code/AIMI Research/TMO/images:/input', '-v', '/Users/ahmed/code/AIMI Research/TMO/tmo_outputs:/output', 'lhdr', '-l', '/input/10999.hdr', '--tmo', 'vanhateren', '-o', '/output/10999__vanhateren.png']' returned non-zero exit status 1.",2026-10-07T22:58:03
+kimkautz,10999,images/10999.hdr,"Command '['docker', 'run', '--rm', '-v', '/Users/ahmed/code/AIMI Research/TMO/images:/input', '-v', '/Users/ahmed/code/AIMI Research/TMO/tmo_outputs:/output', 'lhdr', '-l', '/input/10999.hdr', '--tmo', 'kimkautz', '-o', '/output/10999__kimkautz.png']' returned non-zero exit status 1.",2026-10-07T22:58:03

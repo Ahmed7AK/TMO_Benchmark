@@ -1,0 +1,15 @@
+rule,what,choice,n_folds
+primary,fset,ALL,5
+primary,model,struct_lgbm,5
+primary,config,ALL+struct_lgbm,5
+fset_argmax,fset,ALL,3
+fset_argmax,fset,greedy,2
+fset_argmax,model,struct_lgbm,5
+fset_argmax,config,ALL+struct_lgbm,3
+fset_argmax,config,greedy+struct_lgbm,2
+joint_argmax,fset,ALL,3
+joint_argmax,fset,greedy,2
+joint_argmax,model,struct_lgbm,5
+joint_argmax,config,ALL+struct_lgbm,3
+joint_argmax,config,greedy+struct_lgbm,2
+greedy,group_removed,brisque,2

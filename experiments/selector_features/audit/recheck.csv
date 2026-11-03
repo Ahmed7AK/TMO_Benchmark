@@ -1,0 +1,15 @@
+mine,theirs,max_rel_diff,median_rel_diff,corr
+h17_dr,hulusic17.h17_dr,0.0,0.0,1.0
+h17_ik,hulusic17.h17_ik,0.0,0.0,1.0
+h17_ik_on_Lprime,hulusic17.h17_ik,0.677436,0.061944,0.921446
+r02_key_lhdr,reinhard02.r02_key_est,0.210481,0.000604,0.988904
+d03_divider_lhdr,drago03.d03_divider,0.371719,0.003115,0.965629
+m11_sum_p13_lhdr,mai11.m11_sum_p13,0.291948,0.0,0.866786
+d02_base_range_lhdr,durand02.d02_base_range,0.055973,0.008123,0.998497
+tmqi_vis0,tmqi.tmqi_vis0,0.003329,0.0,1.0
+tmqi_vis1,tmqi.tmqi_vis1,0.000748,0.0,1.0
+tmqi_vis2,tmqi.tmqi_vis2,0.000502,0.0,
+tmqi_vis3,tmqi.tmqi_vis3,0.0,0.0,
+tmqi_vis4,tmqi.tmqi_vis4,0.0,0.0,
+r05_key_lhdr,reinhard05.r05_key,0.496541,0.0,0.636116
+kk08_k1,kimkautz08.kk08_k1,0.0,0.0,1.0

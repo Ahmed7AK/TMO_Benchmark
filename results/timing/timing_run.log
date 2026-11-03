@@ -1,0 +1,235 @@
+warm-up on 10770
+    [catmo] device=mps  2.7s/img
+    [uncltmo] device=mps  5.7s/img
+    [unpaired_hdr] device=mps  4.8s/img
+    [catmo] device=mps  2.8s/img
+    [uncltmo] device=mps  4.5s/img
+    [unpaired_hdr] device=mps  3.3s/img
+[1/50] 10683: 16.3s
+    [catmo] device=mps  2.7s/img
+    [uncltmo] device=mps  4.7s/img
+    [unpaired_hdr] device=mps  3.7s/img
+[2/50] 10949: 18.8s
+    [catmo] device=mps  2.8s/img
+    [uncltmo] device=mps  5.9s/img
+    [unpaired_hdr] device=mps  4.8s/img
+[3/50] 10557: 21.2s
+    [catmo] device=mps  2.8s/img
+    [uncltmo] device=mps  5.7s/img
+    [unpaired_hdr] device=mps  4.0s/img
+[4/50] 10204: 19.0s
+    [catmo] device=mps  2.9s/img
+    [uncltmo] device=mps  5.0s/img
+    [unpaired_hdr] device=mps  4.4s/img
+[5/50] 10592: 19.4s
+    [catmo] device=mps  2.9s/img
+    [uncltmo] device=mps  6.0s/img
+    [unpaired_hdr] device=mps  3.5s/img
+[6/50] 10309: 19.7s
+    [catmo] device=mps  2.8s/img
+    [uncltmo] device=mps  6.5s/img
+    [unpaired_hdr] device=mps  4.2s/img
+[7/50] 10454: 20.8s
+    [catmo] device=mps  2.9s/img
+    [uncltmo] device=mps  7.0s/img
+    [unpaired_hdr] device=mps  4.3s/img
+[8/50] 10124: 23.1s
+    [catmo] device=mps  2.7s/img
+    [uncltmo] device=mps  4.5s/img
+    [unpaired_hdr] device=mps  3.9s/img
+[9/50] 10148: 17.4s
+    [catmo] device=mps  2.7s/img
+    [uncltmo] device=mps  4.6s/img
+    [unpaired_hdr] device=mps  4.6s/img
+[10/50] 10845: 17.5s
+    [catmo] device=mps  2.6s/img
+    [uncltmo] device=mps  5.3s/img
+    [unpaired_hdr] device=mps  4.0s/img
+[11/50] 10029: 18.3s
+    [catmo] device=mps  2.8s/img
+    [uncltmo] device=mps  5.2s/img
+    [unpaired_hdr] device=mps  3.5s/img
+[12/50] 10723: 16.8s
+    [catmo] device=mps  2.7s/img
+    [uncltmo] device=mps  4.7s/img
+    [unpaired_hdr] device=mps  3.8s/img
+[13/50] 10620: 17.4s
+    [catmo] device=mps  2.6s/img
+    [uncltmo] device=mps  5.1s/img
+    [unpaired_hdr] device=mps  4.0s/img
+[14/50] 10157: 19.2s
+    [catmo] device=mps  2.6s/img
+    [uncltmo] device=mps  5.4s/img
+    [unpaired_hdr] device=mps  4.0s/img
+[15/50] 10368: 18.4s
+    [catmo] device=mps  3.1s/img
+    [uncltmo] device=mps  5.8s/img
+    [unpaired_hdr] device=mps  4.3s/img
+[16/50] 10616: 21.6s
+    [catmo] device=mps  3.6s/img
+    [uncltmo] device=mps  6.3s/img
+    [unpaired_hdr] device=mps  5.0s/img
+[17/50] 10158: 21.8s
+    [catmo] device=mps  2.7s/img
+    [uncltmo] device=mps  5.3s/img
+    [unpaired_hdr] device=mps  4.0s/img
+[18/50] 10216: 18.6s
+    [catmo] device=mps  2.7s/img
+    [uncltmo] device=mps  5.1s/img
+    [unpaired_hdr] device=mps  4.0s/img
+[19/50] 10517: 18.1s
+    [catmo] device=mps  2.7s/img
+    [uncltmo] device=mps  5.3s/img
+    [unpaired_hdr] device=mps  4.5s/img
+[20/50] 10424: 18.8s
+    [catmo] device=mps  2.7s/img
+    [uncltmo] device=mps  5.4s/img
+    [unpaired_hdr] device=mps  4.2s/img
+[21/50] 10236: 18.5s
+    [catmo] device=mps  2.5s/img
+    [uncltmo] device=mps  5.1s/img
+    [unpaired_hdr] device=mps  4.0s/img
+[22/50] 10303: 18.0s
+    [catmo] device=mps  2.6s/img
+    [uncltmo] device=mps  4.5s/img
+    [unpaired_hdr] device=mps  4.7s/img
+[23/50] 10099: 18.1s
+    [catmo] device=mps  2.5s/img
+    [uncltmo] device=mps  4.7s/img
+    [unpaired_hdr] device=mps  4.5s/img
+[24/50] 10243: 17.9s
+    [catmo] device=mps  2.7s/img
+    [uncltmo] device=mps  4.8s/img
+    [unpaired_hdr] device=mps  4.5s/img
+[25/50] 10040: 18.4s
+    [catmo] device=mps  2.6s/img
+    [uncltmo] device=mps  4.2s/img
+    [unpaired_hdr] device=mps  3.6s/img
+[26/50] 10699: 15.7s
+    [catmo] device=mps  2.5s/img
+    [uncltmo] device=mps  4.0s/img
+    [unpaired_hdr] device=mps  3.3s/img
+[27/50] 10089: 16.0s
+    [catmo] device=mps  2.6s/img
+    [uncltmo] device=mps  4.7s/img
+    [unpaired_hdr] device=mps  4.3s/img
+[28/50] 10614: 17.7s
+    [catmo] device=mps  2.5s/img
+    [uncltmo] device=mps  5.0s/img
+    [unpaired_hdr] device=mps  4.3s/img
+[29/50] 10624: 17.8s
+    [catmo] device=mps  2.5s/img
+    [uncltmo] device=mps  4.0s/img
+    [unpaired_hdr] device=mps  3.2s/img
+[30/50] 10650: 14.6s
+    [catmo] device=mps  2.4s/img
+    [uncltmo] device=mps  3.4s/img
+    [unpaired_hdr] device=mps  3.2s/img
+[31/50] 10653: 13.8s
+    [catmo] device=mps  2.6s/img
+    [uncltmo] device=mps  4.4s/img
+    [unpaired_hdr] device=mps  4.0s/img
+[32/50] 10979: 16.9s
+    [catmo] device=mps  2.5s/img
+    [uncltmo] device=mps  4.5s/img
+    [unpaired_hdr] device=mps  4.7s/img
+[33/50] 10622: 18.0s
+    [catmo] device=mps  2.5s/img
+    [uncltmo] device=mps  3.8s/img
+    [unpaired_hdr] device=mps  3.2s/img
+[34/50] 10250: 15.6s
+    [catmo] device=mps  2.5s/img
+    [uncltmo] device=mps  6.8s/img
+    [unpaired_hdr] device=mps  3.8s/img
+[35/50] 10816: 19.8s
+    [catmo] device=mps  2.6s/img
+    [uncltmo] device=mps  4.9s/img
+    [unpaired_hdr] device=mps  3.7s/img
+[36/50] 10611: 17.3s
+    [catmo] device=mps  2.5s/img
+    [uncltmo] device=mps  4.0s/img
+    [unpaired_hdr] device=mps  4.2s/img
+[37/50] 10118: 17.0s
+    [catmo] device=mps  2.6s/img
+    [uncltmo] device=mps  5.4s/img
+    [unpaired_hdr] device=mps  3.4s/img
+[38/50] 10580: 17.7s
+    [catmo] device=mps  2.6s/img
+    [uncltmo] device=mps  4.3s/img
+    [unpaired_hdr] device=mps  3.5s/img
+[39/50] 10060: 16.6s
+    [catmo] device=mps  2.5s/img
+    [uncltmo] device=mps  4.5s/img
+    [unpaired_hdr] device=mps  3.5s/img
+[40/50] 10886: 15.9s
+    [catmo] device=mps  2.6s/img
+    [uncltmo] device=mps  3.7s/img
+    [unpaired_hdr] device=mps  2.9s/img
+[41/50] 10122: 15.3s
+    [catmo] device=mps  2.5s/img
+    [uncltmo] device=mps  4.0s/img
+    [unpaired_hdr] device=mps  3.4s/img
+[42/50] 10446: 16.0s
+    [catmo] device=mps  2.5s/img
+    [uncltmo] device=mps  3.6s/img
+    [unpaired_hdr] device=mps  2.8s/img
+[43/50] 10365: 15.1s
+    [catmo] device=mps  2.7s/img
+    [uncltmo] device=mps  3.8s/img
+    [unpaired_hdr] device=mps  3.0s/img
+[44/50] 10279: 15.6s
+    [catmo] device=mps  2.5s/img
+    [uncltmo] device=mps  4.4s/img
+    [unpaired_hdr] device=mps  3.8s/img
+[45/50] 10955: 16.7s
+    [catmo] device=mps  2.3s/img
+    [uncltmo] device=mps  4.6s/img
+    [unpaired_hdr] device=mps  3.8s/img
+[46/50] 10290: 16.9s
+    [catmo] device=mps  2.5s/img
+    [uncltmo] device=mps  5.1s/img
+    [unpaired_hdr] device=mps  4.2s/img
+[47/50] 10145: 18.2s
+    [catmo] device=mps  2.5s/img
+    [uncltmo] device=mps  4.2s/img
+    [unpaired_hdr] device=mps  3.0s/img
+[48/50] 10221: 15.9s
+    [catmo] device=mps  2.4s/img
+    [uncltmo] device=mps  4.0s/img
+    [unpaired_hdr] device=mps  3.9s/img
+[49/50] 10869: 16.1s
+    [catmo] device=mps  3.0s/img
+    [uncltmo] device=mps  4.3s/img
+    [unpaired_hdr] device=mps  3.7s/img
+[50/50] 10872: 16.6s
+
+50 images, 15 candidate operators, seconds per image
+
+                    mean  median     min     max
+features           0.122   0.127   0.068   0.164
+predict            0.048   0.054   0.019   0.069
+picked_tmo         0.920   0.347   0.036   4.280
+selector_total     1.090   0.516   0.164   4.473
+exhaustive_tmo    16.619  16.627  13.129  21.636
+exhaustive_tmqi    0.918   0.953   0.588   1.242
+exhaustive_total  17.540  17.510  13.719  22.880
+speedup           40.416  34.087   3.778  95.594
+
+per operator
+              tmo_mean  tmqi_mean  tmo_median  tmqi_median
+operator                                                  
+ashikhmin        0.452      0.062       0.450        0.064
+att              0.047      0.052       0.046        0.053
+catmo            2.671      0.056       2.626        0.056
+drago            0.389      0.062       0.379        0.064
+durand           0.397      0.066       0.365        0.067
+fattal           1.184      0.063       1.148        0.066
+kimkautz         0.374      0.065       0.353        0.067
+lischinski       0.397      0.064       0.392        0.067
+mai              0.344      0.065       0.339        0.067
+mantiuk06        0.515      0.064       0.482        0.065
+mantiuk08        0.376      0.065       0.363        0.067
+reinhard02       0.353      0.064       0.340        0.068
+reinhard05       0.357      0.064       0.351        0.066
+uncltmo          4.859      0.054       4.722        0.054
+unpaired_hdr     3.903      0.053       3.985        0.054

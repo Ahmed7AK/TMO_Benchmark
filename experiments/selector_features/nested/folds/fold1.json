@@ -1,0 +1,287 @@
+{
+ "fold": 1,
+ "n_train": 794,
+ "n_test": 198,
+ "n_train_scenes": 794,
+ "greedy_subset": "hulusic17+pouli10+reinhard02+drago03+durand02+fattal02+reinhard05+kimkautz08+mai11+mantiuk08+tmqi+brisque+si+tmqiblock",
+ "greedy_removed": [],
+ "greedy_steps": [
+  {
+   "step": 0,
+   "removed": "",
+   "groups": "hulusic17+pouli10+reinhard02+drago03+durand02+fattal02+reinhard05+kimkautz08+mai11+mantiuk08+tmqi+brisque+si+tmqiblock",
+   "n_groups": 14,
+   "mean_Q": 0.9583604628463477,
+   "exact": 0.6152392947103275,
+   "gain": 0.0,
+   "gain_worst": 0.0
+  }
+ ],
+ "greedy_trials": [
+  {
+   "step": 1,
+   "removed": "hulusic17",
+   "dQ": -0.00017006863979857068,
+   "dQ_worst": -0.0004155566750629891
+  },
+  {
+   "step": 1,
+   "removed": "pouli10",
+   "dQ": 5.319647355161994e-05,
+   "dQ_worst": -0.00028593073047866735
+  },
+  {
+   "step": 1,
+   "removed": "reinhard02",
+   "dQ": -0.00018226511335017737,
+   "dQ_worst": -0.0003799193954659996
+  },
+  {
+   "step": 1,
+   "removed": "drago03",
+   "dQ": -9.340050377837361e-06,
+   "dQ_worst": -0.0001564710327456309
+  },
+  {
+   "step": 1,
+   "removed": "durand02",
+   "dQ": 4.553022670022999e-05,
+   "dQ_worst": -3.1410579345192424e-05
+  },
+  {
+   "step": 1,
+   "removed": "fattal02",
+   "dQ": -0.00028211146095730166,
+   "dQ_worst": -0.00044943954659970586
+  },
+  {
+   "step": 1,
+   "removed": "reinhard05",
+   "dQ": -1.0850125944927846e-06,
+   "dQ_worst": -0.0001031901763225429
+  },
+  {
+   "step": 1,
+   "removed": "kimkautz08",
+   "dQ": -9.335768261964361e-05,
+   "dQ_worst": -0.00025533375314856777
+  },
+  {
+   "step": 1,
+   "removed": "mai11",
+   "dQ": -2.4276448362725578e-05,
+   "dQ_worst": -0.0001365453400504757
+  },
+  {
+   "step": 1,
+   "removed": "mantiuk08",
+   "dQ": 3.584005037782223e-05,
+   "dQ_worst": -9.284508816120862e-05
+  },
+  {
+   "step": 1,
+   "removed": "tmqi",
+   "dQ": 6.218576826194644e-05,
+   "dQ_worst": -5.008816120866122e-06
+  },
+  {
+   "step": 1,
+   "removed": "brisque",
+   "dQ": 3.032934508806484e-05,
+   "dQ_worst": -0.0002457065491184851
+  },
+  {
+   "step": 1,
+   "removed": "si",
+   "dQ": 3.4355163727961546e-05,
+   "dQ_worst": -1.1594458438235478e-05
+  },
+  {
+   "step": 1,
+   "removed": "tmqiblock",
+   "dQ": -0.0001626158690176127,
+   "dQ_worst": -0.0004645516372795422
+  }
+ ],
+ "secs_greedy": 1364,
+ "inner_grid": [
+  {
+   "fset": "ALL",
+   "model": "struct_lgbm",
+   "mean_Q": 0.959267337531486,
+   "exact": 0.6693954659949621,
+   "near_005": 0.8217884130982367,
+   "top3": 0.9162468513853904,
+   "mean_Q_by_seed": [
+    0.9592245176322417,
+    0.9593101574307303
+   ]
+  },
+  {
+   "fset": "ALL",
+   "model": "struct_lgbm_nobag",
+   "mean_Q": 0.9588804426952142,
+   "exact": 0.6372795969773299,
+   "near_005": 0.7934508816120907,
+   "top3": 0.9105793450881612,
+   "mean_Q_by_seed": [
+    0.9587762493702772,
+    0.9589846360201512
+   ]
+  },
+  {
+   "fset": "ALL",
+   "model": "struct_ridge",
+   "mean_Q": 0.9582182248110833,
+   "exact": 0.6133501259445844,
+   "near_005": 0.7751889168765743,
+   "top3": 0.9099496221662469,
+   "mean_Q_by_seed": [
+    0.9583299937027708,
+    0.9581064559193957
+   ]
+  },
+  {
+   "fset": "ALL",
+   "model": "struct_et",
+   "mean_Q": 0.9570964489924434,
+   "exact": 0.5610831234256928,
+   "near_005": 0.7115869017632241,
+   "top3": 0.8740554156171285,
+   "mean_Q_by_seed": [
+    0.9569204949622167,
+    0.95727240302267
+   ]
+  },
+  {
+   "fset": "ALL",
+   "model": "lgbm_reg",
+   "mean_Q": 0.9563710610831234,
+   "exact": 0.5220403022670025,
+   "near_005": 0.6788413098236776,
+   "top3": 0.8280856423173804,
+   "mean_Q_by_seed": [
+    0.9563372569269522,
+    0.9564048652392947
+   ]
+  },
+  {
+   "fset": "ALL",
+   "model": "lgbm_clf",
+   "mean_Q": 0.9553840390428211,
+   "exact": 0.5554156171284634,
+   "near_005": 0.697103274559194,
+   "top3": 0.8413098236775819,
+   "mean_Q_by_seed": [
+    0.9550020088161209,
+    0.9557660692695213
+   ]
+  },
+  {
+   "fset": "ALL",
+   "model": "rf_clf",
+   "mean_Q": 0.9553361328715364,
+   "exact": 0.5239294710327456,
+   "near_005": 0.663727959697733,
+   "top3": 0.8211586901763224,
+   "mean_Q_by_seed": [
+    0.9551460415617128,
+    0.9555262241813601
+   ]
+  }
+ ],
+ "greedy_vs_all_ci": null,
+ "choices": {
+  "primary": [
+   "ALL",
+   "struct_lgbm"
+  ],
+  "fset_argmax": [
+   "ALL",
+   "struct_lgbm"
+  ],
+  "joint_argmax": [
+   "ALL",
+   "struct_lgbm"
+  ]
+ },
+ "outer": [
+  {
+   "fset": "ALL",
+   "model": "struct_lgbm",
+   "mean_Q": 0.9607230252525253,
+   "exact": 0.6464646464646465,
+   "near_005": 0.7878787878787878,
+   "top3": 0.9292929292929293,
+   "max_abs_diff_vs_study": 0.0,
+   "picks_equal_study": true
+  },
+  {
+   "fset": "ALL",
+   "model": "struct_lgbm_nobag",
+   "mean_Q": 0.961196202020202,
+   "exact": 0.6111111111111112,
+   "near_005": 0.7727272727272727,
+   "top3": 0.9141414141414141,
+   "max_abs_diff_vs_study": 0.0,
+   "picks_equal_study": true
+  },
+  {
+   "fset": "ALL",
+   "model": "struct_ridge",
+   "mean_Q": 0.96026,
+   "exact": 0.5757575757575758,
+   "near_005": 0.7323232323232324,
+   "top3": 0.8939393939393939,
+   "max_abs_diff_vs_study": 0.0,
+   "picks_equal_study": true
+  },
+  {
+   "fset": "ALL",
+   "model": "struct_et",
+   "mean_Q": 0.9604738535353534,
+   "exact": 0.5959595959595959,
+   "near_005": 0.7626262626262627,
+   "top3": 0.8787878787878788,
+   "max_abs_diff_vs_study": 4.440892098500626e-16,
+   "picks_equal_study": true
+  },
+  {
+   "fset": "ALL",
+   "model": "lgbm_reg",
+   "mean_Q": 0.9594569040404041,
+   "exact": 0.5353535353535354,
+   "near_005": 0.6919191919191919,
+   "top3": 0.8787878787878788,
+   "max_abs_diff_vs_study": 0.0,
+   "picks_equal_study": true
+  },
+  {
+   "fset": "ALL",
+   "model": "lgbm_clf",
+   "mean_Q": 0.9579512373737372,
+   "exact": 0.5454545454545454,
+   "near_005": 0.696969696969697,
+   "top3": 0.8585858585858586,
+   "max_abs_diff_vs_study": 0.0,
+   "picks_equal_study": true
+  },
+  {
+   "fset": "ALL",
+   "model": "rf_clf",
+   "mean_Q": 0.9581762676767678,
+   "exact": 0.5404040404040404,
+   "near_005": 0.702020202020202,
+   "top3": 0.8686868686868687,
+   "max_abs_diff_vs_study": 0.0,
+   "picks_equal_study": true
+  }
+ ],
+ "runs": [
+  {
+   "stage": "outer",
+   "secs": 464,
+   "finished": "2026-10-24 23:26:58"
+  }
+ ]
+}

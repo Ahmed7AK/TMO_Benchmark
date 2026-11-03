@@ -1,0 +1,121 @@
+diff --git a/data/base_dataset.py b/data/base_dataset.py
+index 05643b9..a20d213 100644
+--- a/data/base_dataset.py
++++ b/data/base_dataset.py
+@@ -4,8 +4,10 @@ import torchvision.transforms as transforms
+ import numpy as np
+ import cv2
+ import math
+-import pyexr
+ import imageio
++# MPS/macOS PATCH: pyexr (OpenEXR) is awkward to build on macOS and is only
++# needed to read .exr inputs. Imported lazily inside imread() so that .hdr-only
++# runs don't require it. See imread().
+ 
+ 
+ class BaseDataset(data.Dataset):
+@@ -237,7 +239,22 @@ def get_transform(opt, norm=True, luminance=False):
+ def imread(file):
+     img = None
+     if file.endswith(".exr"):
++        import pyexr  # lazy: only required for .exr inputs
+         img = pyexr.read(file)
++    elif file.endswith(".hdr"):
++        # macOS PATCH: imageio.imread() silently decodes Radiance .hdr to uint8 on
++        # this imageio/FreeImage build (HDR-FI plugin broken), truncating the
++        # linear float radiance to 8 bits BEFORE the network sees it -> blown-out
++        # output. OpenCV decodes the same .hdr to full-range linear float; convert
++        # BGR->RGB to keep imageio's channel order (CATMO works in RGB). Mirrors
++        # UnCLTMO/utils/hdr_image_util.read_hdr_image's fallback.
++        try:
++            img = imageio.imread(file, format="HDR-FI").astype(np.float32)
++        except Exception:
++            bgr = cv2.imread(file, cv2.IMREAD_ANYDEPTH | cv2.IMREAD_COLOR)
++            if bgr is None:
++                raise
++            img = cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB).astype(np.float32)
+     else:
+         img = imageio.imread(file)
+     if len(img.shape) == 2:
+diff --git a/models/base_model.py b/models/base_model.py
+index 3906a90..565697c 100644
+--- a/models/base_model.py
++++ b/models/base_model.py
+@@ -20,7 +20,13 @@ class BaseModel():
+         self.opt = opt
+         self.gpu_ids = opt.gpu_ids
+         self.isTrain = opt.isTrain
+-        self.device = torch.device('cuda:{}'.format(self.gpu_ids[0])) if self.gpu_ids else torch.device('cpu')
++        # MPS PATCH: prefer CUDA (if gpu_ids given) else Apple MPS else CPU.
++        if self.gpu_ids and torch.cuda.is_available():
++            self.device = torch.device('cuda:{}'.format(self.gpu_ids[0]))
++        elif getattr(torch.backends, 'mps', None) is not None and torch.backends.mps.is_available():
++            self.device = torch.device('mps')
++        else:
++            self.device = torch.device('cpu')
+         self.save_dir = os.path.join(opt.checkpoints_dir, opt.name)
+         if opt.resize_or_crop != 'scale_width':
+             torch.backends.cudnn.benchmark = True
+diff --git a/models/networks.py b/models/networks.py
+index 558859e..f0f137b 100644
+--- a/models/networks.py
++++ b/models/networks.py
+@@ -75,6 +75,11 @@ def init_net(net, init_type='normal', init_gain=0.02, gpu_ids=[]):
+         assert(torch.cuda.is_available())
+         net.to(gpu_ids[0])
+         net = torch.nn.DataParallel(net, gpu_ids)
++    else:
++        # MPS PATCH: with no CUDA gpu_ids, place the net on Apple MPS (or CPU)
++        # so it matches the device that inputs are moved to (BaseModel.device).
++        if getattr(torch.backends, 'mps', None) is not None and torch.backends.mps.is_available():
++            net.to(torch.device('mps'))
+     init_weights(net, init_type, gain=init_gain)
+     return net
+ 
+diff --git a/models/test_model.py b/models/test_model.py
+index 2a09aa6..74aef95 100644
+--- a/models/test_model.py
++++ b/models/test_model.py
+@@ -43,9 +43,11 @@ class TestModel(BaseModel):
+ 
+     def set_input(self, input):
+         # we need to use single_dataset mode
+-        self.real_A = input['A'].to(self.device)
++        # MPS PATCH: .float() — the dataset yields float64 tensors, but Apple MPS
++        # does not support float64. Cast to float32 before moving to device.
++        self.real_A = input['A'].float().to(self.device)
+         self.image_paths = input['A_paths']
+-        self.origin_A = input['A_origin'].to(self.device)
++        self.origin_A = input['A_origin'].float().to(self.device)
+ 
+     def forward(self):
+ 
+diff --git a/test.py b/test.py
+index 3bc1942..3c15e7d 100644
+--- a/test.py
++++ b/test.py
+@@ -9,7 +9,9 @@ from util import html
+ if __name__ == '__main__':
+     opt = TestOptions().parse()
+     # hard-code some parameters for test
+-    opt.num_threads = 1   # test code only supports num_threads = 1
++    opt.num_threads = 0   # macOS PATCH: 0 = load in main process. On macOS the
++    # DataLoader uses 'spawn' and cannot pickle get_transform's lambdas, so any
++    # num_workers > 0 crashes. 0 avoids worker subprocesses entirely.
+     opt.batch_size = 1    # test code only supports batch_size = 1
+     opt.serial_batches = True  # no shuffle
+     opt.no_flip = True    # no flip
+diff --git a/util/util.py b/util/util.py
+index f2de57c..ca13430 100644
+--- a/util/util.py
++++ b/util/util.py
+@@ -188,5 +188,8 @@ class ReviseImage():
+             transfor = self.tensor2img(self.transform[i,:,:,:])
+             recover_img = self.recover_img(transfor, image)
+             self.recover[i,:,:,:] = self.img2tensor(recover_img)
+-        self.recover.cuda()
++        # MPS PATCH: was self.recover.cuda() (hardcoded CUDA, and the result was
++        # discarded). recover is already zeros_like(self.images), so keep it on
++        # that device.
++        self.recover = self.recover.to(self.images.device)
+ 

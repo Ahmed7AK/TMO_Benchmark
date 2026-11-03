@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Dataset: 1001 HDR files / 821 MB. Distributed separately -- see README.md
+# ("Dataset"). 00033.hdr in the repo root is kept as a smoke-test sample.
+images/
+
+# Downloaded / release archives of images/ (hosted on Google Drive)
+images.tar.gz
+tmo_images*.zip
+
+# Pipeline outputs (smoke/ and runs/ are the --run-dir folders the README uses)
+smoke/
+runs/
+models/
+tmo_outputs/
+tmqi_results.csv
+selected_tmos.txt
+
+# macOS
+.DS_Store
+
+# Third-party DL repos: their venvs are covered by .venv/ above; the repos
+# themselves are vendored as patched forks (patch series in patches/).
+
+# Pretrained model weights (127 MB). NOT committed -- fetched from their
+# original upstream sources at setup time. See README.md, "Model weights".
+third_party/CATMO/latest_net_G.pth
+third_party/CATMO/checkpoints/
+third_party/UnCLTMO/activate_trained_model/model_weights_imageTMO/
+third_party/unpaired_hdr/activate_trained_model/model_weights/
+
+# Dataset release archive (rebuilt from dataset/)
+tmo_selection_dataset_*.zip
+
+# Regenerable / bulky experiment outputs
+experiments/selector_features/oof/
+experiments/selector_features/logs/
+experiments/selector_features/nested/logs/
+experiments/selector_features/nested/cache/
+experiments/selector_features/audit/lhdr_fetch/

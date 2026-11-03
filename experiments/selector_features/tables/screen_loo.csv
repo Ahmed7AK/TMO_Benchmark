@@ -1,0 +1,17 @@
+fset,label,dQ,dQ_worst,mean_Q,exact,near,n_features
+hulusic17+reinhard02+drago03+durand02+fattal02+reinhard05+kimkautz08+mai11+mantiuk08+tmqi+brisque+si+tmqiblock,-pouli10,0.000399,0.000331,0.959236,0.63004,0.791835,124.0
+hulusic17+pouli10+reinhard02+drago03+durand02+fattal02+reinhard05+kimkautz08+mai11+mantiuk08+tmqi+si+tmqiblock,-brisque,0.000303,9.8e-05,0.95914,0.629536,0.788306,115.0
+hulusic17+pouli10+reinhard02+drago03+durand02+fattal02+kimkautz08+mai11+mantiuk08+tmqi+brisque+si+tmqiblock,-reinhard05,0.000301,0.000157,0.959138,0.626008,0.785282,149.0
+hulusic17+pouli10+reinhard02+durand02+fattal02+reinhard05+kimkautz08+mai11+mantiuk08+tmqi+brisque+si+tmqiblock,-drago03,0.000243,-1.6e-05,0.95908,0.616431,0.776714,149.0
+hulusic17+pouli10+reinhard02+drago03+durand02+fattal02+reinhard05+kimkautz08+mantiuk08+tmqi+brisque+si+tmqiblock,-mai11,0.000233,3.1e-05,0.95907,0.628024,0.782762,149.0
+hulusic17+pouli10+reinhard02+drago03+durand02+fattal02+reinhard05+kimkautz08+mai11+tmqi+brisque+si+tmqiblock,-mantiuk08,0.000202,0.000153,0.959039,0.624496,0.784274,139.0
+hulusic17+pouli10+reinhard02+drago03+fattal02+reinhard05+kimkautz08+mai11+mantiuk08+tmqi+brisque+si+tmqiblock,-durand02,0.000166,0.000112,0.959003,0.621976,0.780746,147.0
+hulusic17+pouli10+reinhard02+drago03+durand02+fattal02+reinhard05+kimkautz08+mai11+mantiuk08+brisque+si+tmqiblock,-tmqi,0.00015,7.5e-05,0.958987,0.618448,0.780746,141.0
+hulusic17+pouli10+reinhard02+drago03+durand02+reinhard05+kimkautz08+mai11+mantiuk08+tmqi+brisque+si+tmqiblock,-fattal02,0.000147,0.000122,0.958984,0.616431,0.780746,145.0
+hulusic17+pouli10+reinhard02+drago03+durand02+fattal02+reinhard05+mai11+mantiuk08+tmqi+brisque+si+tmqiblock,-kimkautz08,0.00014,9.4e-05,0.958977,0.617944,0.772681,149.0
+hulusic17+pouli10+drago03+durand02+fattal02+reinhard05+kimkautz08+mai11+mantiuk08+tmqi+brisque+si+tmqiblock,-reinhard02,0.000125,-0.000132,0.958963,0.61744,0.771673,146.0
+hulusic17+pouli10+reinhard02+drago03+durand02+fattal02+reinhard05+kimkautz08+mai11+mantiuk08+tmqi+brisque+tmqiblock,-si,0.000121,-4.3e-05,0.958958,0.623488,0.78125,150.0
+pouli10+reinhard02+drago03+durand02+fattal02+reinhard05+kimkautz08+mai11+mantiuk08+tmqi+brisque+si+tmqiblock,-hulusic17,8.8e-05,3.3e-05,0.958925,0.623488,0.783266,146.0
+hulusic17+pouli10+reinhard02+drago03+durand02+fattal02+reinhard05+kimkautz08+mai11+mantiuk08+tmqi+brisque+si+tmqiblock,REF,0.0,0.0,0.958837,0.615423,0.772681,
+hulusic17+pouli10+reinhard02+drago03+durand02+fattal02+reinhard05+kimkautz08+mai11+mantiuk08+tmqi+brisque+si,-tmqiblock,-0.00034,-0.000521,0.958497,0.611895,0.762097,114.0
+pouli10,-hulusic17,-0.004342,-0.004487,0.954495,0.475302,0.624496,27.0
